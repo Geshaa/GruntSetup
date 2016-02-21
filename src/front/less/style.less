@@ -1,0 +1,60 @@
+@import "../../modules/less/reset";
+@import "../../modules/less/fonts";
+@import "../../modules/less/flexboxgrid";
+@import "sprite";
+
+html {
+	font-size: 16px;
+}
+
+html, body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	font-family: sans-serif;
+	-webkit-overflow-scrolling: touch;
+	-webkit-touch-callout: none;
+}
+
+input {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-appearance: none;
+
+	&[type=number]::-webkit-outer-spin-button, &[type=number]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+h1 {
+	position: relative;
+	font-size: 2rem;
+	#Font > .TradeGothicBold();
+	display: inline-block;
+
+	&:after {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 0;
+		bottom: 0;
+		content: '';
+		right: -20px;
+		margin: auto;
+		#Sprite > .close-popup(red);
+	}
+}
+
+.box {
+	padding: 10px 5px;
+	background-color: #007FFF;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+
+@import "../../modules/less/mediaQueries";
